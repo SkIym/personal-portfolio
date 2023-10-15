@@ -1,0 +1,50 @@
+*, ::after, ::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+* {
+  border: 1px solid black;
+}
+
+main {
+  height: 100%;
+  padding-top: 40px;
+}
+
+@media (min-width: 1000px) {
+  main {
+    width: 70%;
+    margin: auto;
+  }
+}
+
+nav {
+  background-color: black;
+  color: white;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+li > a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.grid {
+  display: grid;
+}
+
+article {
+  height: 300vh;
+}
+
