@@ -1,17 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500;600;700;800&display=swap');
+
 *, ::after, ::before {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Mulish', sans-serif;
 }
 
 * {
   border: 1px solid black;
 }
 
+h2 {
+  font-weight: 800;
+}
+
 main {
   height: 100%;
   padding-top: 40px;
 }
+
 
 @media (min-width: 1100px) {
   main {
@@ -57,10 +65,49 @@ li > a {
 #pic-container {
   display: flex;
   justify-content: center;
+  padding: 20px;
+}
+
+section {
+  padding: 10px;
 }
 
 #profile-pic {
   width: 250px;
+}
+
+#projects {
+  padding: 10px;
+}
+
+#project-grid {
+  gap: 40px;
+  padding: 20px 10px;
+}
+
+.project-item {
+  grid-template-columns: 200px 1fr;
+}
+
+.project-pic {
+  width: 100%;
+}
+
+.project-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.project-desc {
+  flex: 1;
+}
+
+.project-links {
+  margin-top: auto;
+}
+
+#contact {
+  padding: 10px;
 }
 
 @media (max-width: 1100px) {
@@ -76,6 +123,15 @@ li > a {
   #about {
     display: flex;
     flex-direction: column;
+  }
+
+  .project-item {
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px 1fr;
+  }
+
+  .project-pic {
+    height: 100%;
   }
 }
 
@@ -123,4 +179,6 @@ li > a {
     color: white;
   }
 }
+
+
 
