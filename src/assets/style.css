@@ -1,14 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500;600;700;800&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+
 
 *, ::after, ::before {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Mulish', sans-serif;
+  font-family: 'Plus Jakarta Sans', sans-serif;
 }
 
-* {
+/* * {
   border: 1px solid black;
+} */
+
+body {
+  background-color: rgb(248, 248, 248);
 }
 
 h2 {
@@ -17,7 +24,11 @@ h2 {
 
 main {
   height: 100%;
-  padding-top: 40px;
+  padding: 40px;
+  padding-top: 50px;
+  box-shadow: 0px 2px 10px rgb(122, 122, 122, 0.3);
+  background-color: white;
+  border-radius: 5px;
 }
 
 
@@ -29,12 +40,12 @@ main {
 }
 
 nav {
-  background-color: black;
+  background-color: #38423E;
   color: white;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  padding: 10px;
+  padding: 10px 20px;
 }
 
 ul {
@@ -60,20 +71,33 @@ li > a {
 
 #about {
   grid-template-columns: auto 1fr;
+  align-items: center;
 }
 
 #pic-container {
-  display: flex;
-  justify-content: center;
   padding: 20px;
+}
+
+#profile-pic {
+  width: 250px;
+  border: 3px dashed #38423E;
 }
 
 section {
   padding: 10px;
 }
 
-#profile-pic {
-  width: 250px;
+section > p {
+  padding-bottom: 20px;
+  border-bottom: 10px solid #38423E;
+}
+
+#about-head {
+  font-style: italic;
+}
+
+#project-head {
+  font-weight: 800;
 }
 
 #projects {
@@ -86,34 +110,89 @@ section {
 }
 
 .project-item {
-  grid-template-columns: 200px 1fr;
+  grid-template-columns: 1fr 1.1fr;
+  align-items: center;
+  gap: 10px;
 }
 
 .project-pic {
   width: 100%;
+  border: 1px dashed black;
+  border-radius: 5px;
+  padding: 10px;
 }
+
 
 .project-details {
   display: flex;
   flex-direction: column;
+  background-color: rgb(253, 253, 253);
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 1px 2px 4px rgb(172, 172, 172, 0.2);
+  transition: all 0.2s ease-in-out;
+  border: 1px solid transparent;
+}
+
+.project-details:hover {
+  border: 1px solid rgb(142, 142, 142);
 }
 
 .project-desc {
   flex: 1;
+  padding: 10px;
+  margin-left: 10px;
+  margin-top: 5px;
+  border-left: 1px solid black;
 }
 
 .project-links {
   margin-top: auto;
+  display: flex;
+  justify-content: end;
+  padding: 10px;
+  flex-direction: row-reverse;
+  gap: 10px;
+  overflow: hidden;
 }
 
 #contact {
   padding: 10px;
 }
 
+#contact-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  margin-top: 20px;
+  gap: 10px;
+}
+
+#contact-container > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #dbdbdb70;
+  color: black;
+  padding: 20px 10px;
+}
+
+.github-icon, .eye-icon {
+  width: 25px;
+  transition: all 0.2s ease-out ;
+  z-index: 1;
+}
+
+.github-icon:hover, .eye-icon:hover {
+  cursor: pointer;
+}
+
 @media (max-width: 1100px) {
   #profile-pic {
     width: 200px;
   }
+}
+
+@media (min-width: 800px) {
 }
 
 @media (max-width: 800px) {
@@ -127,12 +206,17 @@ section {
 
   .project-item {
     grid-template-columns: 1fr;
-    grid-template-rows: 100px 1fr;
   }
 
-  .project-pic {
-    height: 100%;
+  .project-links {
+    margin-top: 10px;
   }
+
+  .project-details {
+    border: 1px solid transparent;
+    border-top: 3px solid transparent;
+  }
+
 }
 
 @media (max-width: 400px) {
@@ -171,8 +255,8 @@ section {
   ul {
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    padding: 10px;
+    gap: 15px;
+    padding: 15px;
     position: absolute;
     right: 10px;
     background-color: black;
