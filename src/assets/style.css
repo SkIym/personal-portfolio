@@ -40,12 +40,12 @@ main {
 }
 
 nav {
-  background-color: #38423E;
   color: white;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
   padding: 10px 20px;
+  color: black;
 }
 
 ul {
@@ -89,7 +89,7 @@ section {
 
 section > p {
   padding-bottom: 20px;
-  border-bottom: 10px solid #38423E;
+  border-bottom: 2px solid #38423E;
 }
 
 #about-head {
